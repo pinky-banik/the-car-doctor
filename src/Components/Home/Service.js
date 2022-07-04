@@ -1,10 +1,12 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import useService from './../../Hooks/useService';
 
 const Service = ({service}) => {
+    
     const {id,name,price,description,img} = service;
     const navigate = useNavigate();
-    const handleServiceDetails =id=>{
+    const handleServiceDetails =()=>{
         navigate(`/service/${id}`)
     }
     return (
@@ -14,7 +16,7 @@ const Service = ({service}) => {
             <h1>{price}</h1>
             <h1>{description}</h1>
             <img src={img} alt="service" />
-            <button className='bg-green-500 p-5 rounded-xl' onClick={()=>handleServiceDetails(id)}>go to somewhere</button>
+            <button className='bg-green-500 p-5 rounded-xl' onClick={handleServiceDetails}>go to somewhere</button>
         </div>
     );
 };

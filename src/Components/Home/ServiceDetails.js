@@ -1,17 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import useService from '../../Hooks/useService';
 
 const ServiceDetails = () => {
     const {serviceId} = useParams();
-    const [services,setServices] = useState([]);
-
-    useEffect(()=>{
-        fetch('services.json')
-        .then(result=>result.json())
-        .then(data=>{
-            setServices(data);
-        })
-    },[services])
+    const [services,setServices] = useService();
     
     return (
         <div>

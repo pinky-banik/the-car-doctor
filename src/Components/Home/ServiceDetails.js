@@ -15,7 +15,6 @@ const ServiceDetails = () => {
                 </div>
             ))
            }
-           //ghurbar gelam
         </div>
     );
 };

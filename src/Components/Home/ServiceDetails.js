@@ -15,7 +15,6 @@ const ServiceDetails = () => {
                 </div>
             ))
            }
-           {/* ami onk kharap */}
         </div>
     );
 };

@@ -12,6 +12,7 @@ const useService = () => {
             setServices(data);
             console.log(data);
         })
+        //mukti chai
     },[])
 
     return {services,setServices}
